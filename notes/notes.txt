@@ -1,0 +1,91 @@
+IContact Application Using express & Mongodb - developed by : Vishakha Kalariya
+-------------------------------------------------------------------------------
+
+DATABASE : IContact
+Tables : contacts , groups
+Editor : VSCode
+
+-> API Testing
+-------------------------------------------------------------------------------
+->Test the Server (using ThunderClient / postman / insomnia)
+-------------------------------------------------------------------------------
+
+GET -> to get data from server -> READ
+POST -> to create data at server -> CREATE
+PUT -> to update data at server -> UPDATE
+DELETE -> to delete data at server -> DELETE
+
+/**
+    @usage : to get all contacts
+    @method : GET
+    @params : no-params
+    @url : https://localhost:9999/contacts
+*/
+
+/**
+    @usage : get a contacts
+    @method : GET
+    @params : sparams
+    @url : https://localhost:9999/contacts/:contactID
+*/
+
+/**
+    @usage : create contacts
+    @method : POST
+    @params : name , imageurl , email , mobile , company , title , groupID
+    @url : https://localhost:9999/contacts/
+*/
+
+/**
+    @usage : Update a contacts
+    @method : PUT
+    @params : name , imageurl , email , mobile , company , title , groupID
+    @url : https://localhost:9999/contacts:contactID
+*/
+
+/**
+    @usage : Delete a contacts
+    @method : DELETE
+    @params : contactID
+    @url : https://localhost:9999/contacts/:contactID
+*/
+
+/** 
+    @usage : get all groups
+    @method : GET
+    @params : no-params
+    @url : https://localhost:9999/groups
+*/
+
+/**
+    @usage : get a group
+    @method : GET
+    @params : groupID
+    @url : https://localhost:9999/groups/:groupID
+*/
+    
+export group interface{
+
+name:string;
+imgurl:string;
+mobile:string;
+email:string;
+company:string;
+title:string;
+groupID:groupID
+}
+
+export interface groupID{
+    id:string;
+    name:string;
+    createdAt?:Date;
+    updateAt?:Date;
+}
+
+export Company interface{
+  name: string;
+  
+ }
+
+
+
