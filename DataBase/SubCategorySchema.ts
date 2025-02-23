@@ -3,6 +3,7 @@ import { EcomSubCategory } from '../models/EcomSubCategory'
 
 const SubCategorySchema = new Schema<EcomSubCategory>(
     {
+        category_id:{type:Schema.Types.ObjectId, ref:"catagory"},
         name: {
             type: String, required: true, lowercase: true
         },

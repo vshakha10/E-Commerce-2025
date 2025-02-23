@@ -1,8 +1,8 @@
-IContact Application Using express & Mongodb - developed by : Vishakha Kalariya
+ E-COMMERCE Application Using express & Mongodb - developed by : Vishakha Kalariya
 -------------------------------------------------------------------------------
 
-DATABASE : IContact
-Tables : contacts , groups
+DATABASE : E-COMMERCE
+Tables :  Category , SubCategory
 Editor : VSCode
 
 -> API Testing
@@ -64,28 +64,8 @@ DELETE -> to delete data at server -> DELETE
     @url : https://localhost:9999/groups/:groupID
 */
     
-export group interface{
 
-name:string;
-imgurl:string;
-mobile:string;
-email:string;
-company:string;
-title:string;
-groupID:groupID
-}
 
-export interface groupID{
-    id:string;
-    name:string;
-    createdAt?:Date;
-    updateAt?:Date;
-}
-
-export Company interface{
-  name: string;
-  
- }
 
 
 

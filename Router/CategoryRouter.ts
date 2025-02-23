@@ -40,7 +40,7 @@ CategoryRouter.post('/', async (request: Request, response: Response) => {
  * params: name , description , logo , isActive  ,CategoryID
  */
 
-CategoryRouter.put("/:id" , async(request:Request , res:Response)=>
+CategoryRouter.put("/:id" , async(request:Request , response:Response)=>
 {
     await Category.UpdateCategory(request,response)
 })
@@ -52,7 +52,7 @@ CategoryRouter.put("/:id" , async(request:Request , res:Response)=>
  */
 
 
-CategoryRouter.delete("/:id", async (request: Request, res: Response) => {
+CategoryRouter.delete("/:id", async (request: Request, response: Response) => {
     await Category.DeleteCategory(request, response)
 })
 

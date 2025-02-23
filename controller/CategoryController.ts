@@ -4,10 +4,10 @@ import { EcomCategory } from "../models/EcomCategory";
 
 
 /**
- * @usage : Get All SubCaterory
- * @methods : GET
- * @params : not - params
- * @url : http://127.0.0.1:6666/category
+ * usage : Get All SubCaterory
+ * methods : GET
+ * params : not - params
+ * url : http://127.0.0.1:6666/category
  */
 
 export const getAllCategory = async (request: Request, response: Response) => {
@@ -29,10 +29,10 @@ export const getAllCategory = async (request: Request, response: Response) => {
 
 
 /**
- * @usage : Get A Caterory
- * @methods : GET
- * @params : CategoryID
- * @url : http://127.0.0.1:6666/category/categoryID
+ * usage : Get A Caterory
+ * methods : GET
+ * params : CategoryID
+ * url : http://127.0.0.1:6666/category/categoryID
  * 
  * 
  */
@@ -43,7 +43,7 @@ export const getCategory = async (request: Request, response: Response) => {
 
         return response.status(200).json({
             data: thegetCategory,
-            msg: "Get all Category"
+            msg: "Get  Category"
         })
     } catch (error) {
         console.error("Error :", error);
@@ -59,16 +59,16 @@ export const getCategory = async (request: Request, response: Response) => {
  * usage : Create a Category
  * methods : POST,
  * params : category_name , category_description , category_logo , category_isActive 
- * @url : http://127.0.0.1:6666/category
+ * url : http://127.0.0.1:6666/category
  */
 
 export const CreateCategory = async(request:Request , response:Response)=>
 {
     try {
-        let { category_name, category_description, category_logo, category_isActive } = request.body;
+        let { category_name, category_description, category_logo,isActive } = request.body;
 
         const newCategory: EcomCategory | null | undefined = await new Category({
-            category_name, category_description, category_logo, category_isActive
+            category_name, category_description, category_logo, isActive
         }).save()
         return response.status(201).json({
                 data: newCategory,
@@ -88,7 +88,7 @@ export const CreateCategory = async(request:Request , response:Response)=>
  * usage : Update a Category 
  * methods:PUT,
  * params:category_name , category_description , category_logo , category_isActive , CategoryID
- * @url : http://127.0.0.1:6666/category/categoryID
+ * url : http://127.0.0.1:6666/category/categoryID
  * 
  */
 
@@ -106,10 +106,10 @@ export const UpdateCategory = async(request:Request , response:Response)=>
         }
 
         // Update the category
-        let { category_name, category_description, category_logo, category_isActive } = request.body;
+        let { category_name, category_description, category_logo, isActive } = request.body;
 
         const theUpdateCategoty: EcomCategory | null | undefined = await Category.findByIdAndUpdate(id,
-            { category_name, category_description, category_logo, category_isActive },
+            { category_name, category_description, category_logo, isActive },
             { new: true }
         )
 
@@ -132,7 +132,7 @@ export const UpdateCategory = async(request:Request , response:Response)=>
  * usage : Delete Category 
  * methods:DELETE
  * Params:CategoryID
- * @url : http://127.0.0.1:6666/category/categoryID
+ * url : http://127.0.0.1:6666/category/categoryID
  * 
  */
 

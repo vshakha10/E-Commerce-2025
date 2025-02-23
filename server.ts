@@ -14,6 +14,12 @@ const app:Application = express()
 app.use(express.json())
 
 
+// Routers
+import SubCategoryRouter from './Router/SubCategoryRouter';
+import CategoryRouter from './Router/CategoryRouter';
+app.use('/category',CategoryRouter)
+app.use('/subcategory',SubCategoryRouter)
+
 
 if (port) {
     app.listen(port, () => {

@@ -5,10 +5,10 @@ import { subscribe } from "diagnostics_channel";
 
 
 /**
- * @usage : Get All SubCaterory
- * @methods : GET
- * @params : not - params
- * @url : http://127.0.0.1:6666/subCategory
+ * usage : Get All SubCaterory
+ * methods : GET
+ * params : not - params
+ * url : http://127.0.0.1:6666/subCategory
  * 
  */
 
@@ -32,10 +32,10 @@ export const getAllSubCategory = async (request: Request, response: Response) =>
 
 
 /**
- * @usage : Get A SubCaterory
- * @methods : GET
- * @params : SubCategoryID
- * @url : http://127.0.0.1:6666/subCategoryID
+ * usage : Get A SubCaterory
+ * methods : GET
+ * params : SubCategoryID
+ * url : http://127.0.0.1:6666/subCategoryID
  * 
  */
 export const getSubCategory = async (request: Request, response: Response) => {
@@ -61,7 +61,7 @@ export const getSubCategory = async (request: Request, response: Response) => {
  * usage : Create a SubCategory
  * methods : POST,
  * params : name , description , logo , isActive 
- * @url : http://127.0.0.1:6666/subCategory
+ * url : http://127.0.0.1:6666/subCategory
  */
 
 export const CreateSubCategory = async(request:Request , response:Response)=>
@@ -93,7 +93,7 @@ export const CreateSubCategory = async(request:Request , response:Response)=>
  * usage : Update a Subcategory 
  * methods:PUT,
  * params:name , description , logo , isActive  , SubCategoryID
- * @url : http://127.0.0.1:6666/subCategory/subCategory
+ * url : http://127.0.0.1:6666/subCategory/subCategory
  */
 
 export const UpdateSubCategory = async(request:Request , response:Response)=>
@@ -136,7 +136,7 @@ export const UpdateSubCategory = async(request:Request , response:Response)=>
  * usage : Delete SubCategory 
  * methods:DELETE
  * Params:SubCategoryID
- * @url : http://127.0.0.1:6666/subCategoryID
+ * url : http://127.0.0.1:6666/subCategoryID
  */
 
 export const DeleteSubCategory = async(request:Request , response:Response)=>
